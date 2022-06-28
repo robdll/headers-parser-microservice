@@ -23,11 +23,16 @@ export default function Home() {
 
         <p className={styles.description}>Example Output:</p>
         <code className={styles.code}>
-          {`{ 
-            "ipaddress":"159.20.14.100",
-            "language":"en-US,en;q=0.5",
-            "software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
-          }`}
+          {`{`}
+          <br />
+          &quot;ipaddress&quot;:&quot;159.20.14.100&quot;,
+          <br />
+          &quot;language&quot;:&quot;en-US,en;q=0.5&quot;,
+          <br />
+          &quot;software&quot;:&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64;
+          rv:50.0) Gecko/20100101 Firefox/50.0&quot;
+          <br />
+          {`}`}
         </code>
 
         <p className={styles.description}>Try it out</p>
