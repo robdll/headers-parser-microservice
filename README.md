@@ -1,34 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Header-parser microservice**
 
-## Getting Started
+Microservice API to get requester information such us ip address, language and OS
 
-First, run the development server:
+## **Installation**
+
+1. clone this repository
 
 ```bash
-npm run dev
-# or
+git clone git@github.com:robdll/headers-parser-microservice.git
+```
+
+2. move to the project directory and install dependecies
+
+```bash
+cd headers-parser-microservice
+yarn
+```
+
+3. run locally
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. visit [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## **API usage**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### **URL**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+> `<projecturl>`/api/whoami
 
-## Learn More
+### **RETURNED VALUE**
 
-To learn more about Next.js, take a look at the following resources:
+json object containing the following key/value
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`ipaddress`: user ip address
+`language`: browser language
+`software`: user browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### **EXAMPLE**
 
-## Deploy on Vercel
+> `<projecturl>`/api/whoami
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+{
+    "ipaddress":"159.20.14.100","language":"en-US,en;q=0.5",
+    "software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+}
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+
+## Deploy
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
